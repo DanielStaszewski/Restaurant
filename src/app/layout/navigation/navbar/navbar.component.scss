@@ -1,0 +1,19 @@
+.user {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+a.dropdown-item{
+    text-align: center;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+@media(max-width: 991px){
+    .navbar-nav{
+        display: none;
+    }
+}

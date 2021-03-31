@@ -1,0 +1,75 @@
+@import "./reset";
+@import "./fonts";
+@import "./variables";
+@import "../../node_modules/material-design-icons/iconfont/material-icons.css";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+*{
+  box-sizing: border-box !important;
+  outline: none !important;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0, 0.75);
+  z-index: 2000;
+}
+
+p{
+  color: #999b9f;
+  line-height: 28px;
+}
+
+
+  .btn-primary{
+    color: white;
+    &:hover{
+      color: white;
+    }
+  }
+
+  .btn-outline-primary{
+    &:hover{
+      color: white;
+    }
+  }
+
+  .close{
+    cursor: pointer;
+  }
+
+  .text-white{
+    color: white;
+  }
+
+  .text-mute{
+    color: #cccccc;
+  }
+
+  a{
+    cursor: pointer;
+  }
+
+
+  
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-30 { font-size: 30px; }
+.material-icons.md-42 { font-size: 42px; }
+.material-icons.md-48 { font-size: 48px; }
+  
+
+
+
+  

@@ -1,0 +1,16 @@
+<div class="backdrop">
+</div>
+<div class="alert-box">
+    <span class="close" (click)="onClose()">&times;</span>
+    <div class="span-wrapper">
+        <span class="material-icons md-48 text-success">
+            check_circle
+        </span>
+        <h3>Success!</h3>
+    </div>
+    <p>{{ message }}</p>
+    <hr>
+    <div class="alert-box-actions">
+        <button class="btn btn-primary px-4" (click)="onClose()">Close</button>
+    </div>
+</div>

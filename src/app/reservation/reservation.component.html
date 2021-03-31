@@ -1,0 +1,107 @@
+<app-loading-spinner *ngIf="loading"></app-loading-spinner>
+
+<section class="reservation">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <header class="d-flex flex-column align-items-center py-3 mb-lg-3">
+                    <h1 class="text-center px-3">Reserve your table!</h1>
+                    <p class="text-center px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+                        fuga, alias
+                        distinctio
+                        voluptatum.</p>
+                </header>
+            </div>
+        </div>
+
+        <div class="row px-lg-5">
+
+            <div class="col-12 col-md-6 img-wrapper p-0">
+                <div class="reservation-img reservation-img--blur">
+                </div>
+                <div class="reservation-img reservation-img--main"></div>
+            </div>
+
+            <div class="col-12 col-md-6 p-0 form-wrapper d-flex justify-content-center">
+                <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()" class="reservation-form py-5">
+                    <div class="form-row">
+                        <div class="form-group mt-1  col-12">
+                            <label for="nameInput"><small>Name*</small></label>
+                            <input id="nameInput" type="text" class="form-control" formControlName="name">
+                            <small class="text-danger"
+                                *ngIf="!reservationForm.get('name').valid && reservationForm.get('name').touched">
+                                Please enter your name!
+                            </small>
+                        </div>
+                        <div class="form-group mt-1  col-12">
+                            <label for="emailInput"><small>E-mail*</small></label>
+                            <input id="emailInput" type="email" class="form-control" formControlName="email">
+                            <small class="text-danger"
+                                *ngIf="!reservationForm.get('email').valid && reservationForm.get('email').touched">
+                                Please enter valid e-mail!
+                            </small>
+                        </div>
+                        <div class="form-group mt-1  col-12">
+                            <label for="phoneInput"><small>Phone*</small></label>
+                            <input id="phoneInput" type="text" class="form-control" formControlName="phone">
+                            <small class="text-danger"
+                                *ngIf="!reservationForm.get('phone').valid && reservationForm.get('phone').touched">
+                                Please enter valid phone number!
+                            </small>
+                        </div>
+                        <div class="form-group mt-1  col-12">
+                            <label for="peopleSelect"><small>Number of Guests*</small></label>
+                            <select class="form-control" id="peopleSelect" formControlName="people">
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
+                                <option value='8'>8</option>
+                            </select>
+                            <small class="text-danger"
+                                *ngIf="!reservationForm.get('people').valid && reservationForm.get('people').touched">
+                                Please choose valid number of guests!
+                            </small>
+                        </div>
+                        <div class="form-group mt-1 col-12 col-lg-6">
+                            <label for="dateInput"><small>Date*</small></label>
+                            <input type="text" id="dateInput" class="form-control" ngbDatepicker #d="ngbDatepicker"
+                                autocomplete="off" [maxDate]="maxDate" formControlName="date" (click)="d.toggle()"
+                                [maxDate]="{year: +maxDate[2], month: +maxDate[1], day: +maxDate[0]}"
+                                [minDate]="{year: +minDate[2], month: +minDate[1], day: +minDate[0]}" />
+                                <small class="text-danger"
+                                *ngIf="!reservationForm.get('date').valid && reservationForm.get('date').touched">
+                                Please choose valid date!
+                            </small>
+                        </div>
+                        <div class="form-group mt-1 col-12 col-lg-6">
+                            <label for="hourSelect"><small>Hour*</small></label>
+                            <select class="form-control" id="hourSelect" formControlName="hour">
+                                <option value='18:00'>18:00</option>
+                                <option value='18:30'>18:30</option>
+                                <option value='19:00'>19:00</option>
+                                <option value='19:30'>19:30</option>
+                                <option value='20:00'>20:00</option>
+                                <option value='20:30'>20:30</option>
+                                <option value='21:00'>21:00</option>
+                            </select>
+                            <small class="text-danger"
+                                *ngIf="!reservationForm.get('hour').valid && reservationForm.get('hour').touched">
+                                Please choose valid hour!
+                            </small>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center mt-4 my-2">
+                            <button type="submit" class="btn btn-lg btn-outline-primary py-2 px-4">Send Reservation</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>

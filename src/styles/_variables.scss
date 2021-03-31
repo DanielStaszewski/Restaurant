@@ -1,0 +1,22 @@
+
+$primary: #fdb44b;
+
+$jumbotron-bg: rgba(#000, 0.3);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": #000,
+  "danger": #ff4136,
+  "success": #388e3c
+);
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$font-family-sans-serif: "Raleway", sans-serif;

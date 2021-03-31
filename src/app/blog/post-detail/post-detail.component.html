@@ -1,0 +1,100 @@
+<div class="container">
+
+    <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+
+    <div class="row px-3">
+        <div class="col-12 col-lg-8 col-xl-9 pr-lg-5">
+            <article class="post-details">
+                <div class="post-detail">
+                    <a class="img-wrapper">
+                        <img class="img-thumbnail" [src]="post.imgUrl" alt="post image">
+                    </a>
+                    <h1 class="text-left px-2">{{ post.title }}</h1>
+                    <small class="px-2">{{post.createdDate}}</small>
+                    <p class="p-2">{{ post.content }}</p>
+                </div>
+                <div class="post-tags py-3">
+                    <a class="tag-wrapper" *ngFor="let tag of post.tags">
+                        <div class="tag" (click)="showPostsListByTag(tag)">
+                            {{ tag | uppercase }}</div>
+                    </a>
+                </div>
+
+                <section class="post-comments">
+                    <div class="pr-3 pt-4">
+                        <h4>Comments</h4>
+                        <hr>
+                        <ng-template appPlaceholder></ng-template>
+                        <p *ngIf="postComments.length < 1 && !isLoading">There are no comments for this post.</p>
+                        <div *ngIf="!isLoading">
+                            <div class="comment row py-3 px-3" *ngFor="let comment of postComments">
+                                <div class="col-3 col-sm-2 col-md-1 px-2">
+                                    <span class="material-icons md-48">
+                                        account_circle
+                                    </span>
+                                </div>
+                                <div class="col-9 col-sm-10 col-md-11 px-2">
+                                    <h5 class="comment-author">{{comment.username}}</h5>
+                                    <small class="comment-created-date">{{comment.createdDate |
+                                        date:"yyyy-MM-dd"}}</small>
+                                    <p class="comment-content">{{comment.content}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-com-wrapper px-4 py-3">
+                        <h5>Leave a comment</h5>
+                        <form class="form-group" [formGroup]="commentForm" (ngSubmit)="onPostComment()" *ngIf="user">
+                            <textarea class="form-control" formControlName="message" rows="5"></textarea>
+                            <button class="btn btn-primary" type="submit">Post comment</button>
+                        </form>
+                        <div class="d-flex flex-column align-items-center mt-4 pb-4" *ngIf="!user">
+                            <p class="text-center pr-2 mb-1">To add a comment you must be logged in.</p>
+                            <a [routerLink]="['/auth']" class="text-primary">Click here to login</a>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+            <aside class="tools mt-5">
+                <h4>Search More</h4>
+                <hr>
+                <div class="row">
+                    <section class="search col-12 col-lg-12">
+                        <div class="form-wrapper">
+                            <form class="fg--search px-2" [formGroup]="searchForm" (ngSubmit)="onSearchPosts()">
+                                <input class="input" placeholder="Enter title or tag to search" formControlName="search">
+                                <button type="submit"><i class="material-icons">search</i></button>
+                            </form>
+                        </div>
+                    </section>
+    
+                    <section class="categories col-12 col-md-8 col-lg-12 pt-5">
+                        <ul class="list-group">
+                            <h5>Categories</h5>
+                            <li class="list-group-item d-flex justify-content-between"
+                                *ngFor="let category of postCategoriesAmounts">
+                                <a class="text-primary" (click)="showPostsListByCategory(category.categoryName)">{{
+                                    category.categoryName }}</a>
+                                <span>({{ category.amount }})</span>
+                            </li>
+                        </ul>
+                    </section>
+    
+                    <section class="tag-cloud col-12 col-md-4 col-lg-12 pt-5">
+                        <h5>Tag Cloud</h5>
+                        <a class="tag-wrapper" *ngFor="let tag of post.tags">
+                            <div class="tag" (click)="showPostsListByTag(tag)">
+                                {{ tag | uppercase }}
+                            </div>
+                        </a>
+                    </section>
+                </div>
+            </aside>
+        </div>
+
+    </div>
+
+</div>

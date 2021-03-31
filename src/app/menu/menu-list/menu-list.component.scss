@@ -1,0 +1,37 @@
+.tab-content{
+    width: 950px;
+}
+
+.nav-link, .stretched-link{
+    cursor: pointer;
+}
+
+.meal{
+    border-width: 1px 1px 0px 1px;
+    border-color: #dfdfdf;
+    border-style: solid;
+}
+
+.meal:nth-child(even){
+    border-left: 0;
+}
+
+.meal:nth-last-child(1), .meal:nth-last-child(2){
+    border-width: 1px 1px 1px 1px;
+}
+
+@media(max-width: 767px){
+    .meal{
+        border-width: 1px 1px 0 1px;
+        border-color: #dfdfdf;
+        border-style: solid;
+    }
+    
+    .meal:nth-child(even){
+        border-left: 1px solid #dfdfdf;
+    }
+    
+    .meal:nth-last-child(2){
+        border-width: 1px 1px 0px 1px;
+    }
+}

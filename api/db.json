@@ -1,0 +1,255 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Best food in New York!",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos repellendus hic fugiat itaque provident nulla magni autem odit facilis nesciunt expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatum neque facilis temporibus eos eum eaque veniam doloribus in architecto, asperiores, provident sapiente. Eos iste nulla aspernatur quisquam. Velit, ad!",
+      "imgUrl": "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2020/05/chef-cooking.jpg?fit=1200%2C879&ssl=1",
+      "tags": [
+        "food",
+        "kitchen",
+        "recipes"
+      ],
+      "categories": [
+        "courses",
+        "news",
+        "recipes",
+        "kitchen",
+        "chefs"
+      ],
+      "createdDate": "2020-05-14"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "New edition of MasterChef!",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos repellendus hic fugiat itaque provident nulla magni autem odit facilis nesciunt expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatum neque facilis temporibus eos eum eaque veniam doloribus in architecto, asperiores, provident sapiente. Eos iste nulla aspernatur quisquam. Velit, ad!",
+      "imgUrl": "https://d-tm.ppstatic.pl/kadry/35/a6/9e382eed1939124a3ef1f8c7d284.1000.jpg",
+      "tags": [
+        "show",
+        "kitchen",
+        "program",
+        "tv"
+      ],
+      "categories": [
+        "tv",
+        "chefs",
+        "shows",
+        "events"
+      ],
+      "createdDate": "2020-12-14"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Singapore street food stalls awarded Michelin stars",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos repellendus hic fugiat itaque provident nulla magni autem odit facilis nesciunt expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatum neque facilis temporibus eos eum eaque veniam doloribus in architecto, asperiores, provident sapiente. Eos iste nulla aspernatur quisquam. Velit, ad!",
+      "imgUrl": "https://photos.prnasia.com/prnvar/20181212/2324544-1-b",
+      "tags": [
+        "star",
+        "singapore",
+        "michelin",
+        "awards"
+      ],
+      "categories": [
+        "events",
+        "cooking",
+        "restaurants"
+      ],
+      "createdDate": "2020-02-14"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "title": "New restaurant in Manchester soon",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos repellendus hic fugiat itaque provident nulla magni autem odit facilis nesciunt expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatum neque facilis temporibus eos eum eaque veniam doloribus in architecto, asperiores, provident sapiente. Eos iste nulla aspernatur quisquam. Velit, ad! quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos repellendus hic fugiat itaque provident nulla magni autem odit facilis nesciunt expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatum neque facilis temporibus eos eum eaque veniam doloribus in architecto, asperiores, provident sapiente. Eos iste nulla aspernatur quisquam. Velit, ad!",
+      "imgUrl": "https://media-cdn.tripadvisor.com/media/photo-s/17/75/3f/d1/restaurant-in-valkenswaard.jpg",
+      "tags": [
+        "trutu"
+      ],
+      "categories": [
+        "courses",
+        "news",
+        "recipes",
+        "kitchen",
+        "chefs"
+      ],
+      "createdDate": "2020-01-11"
+    }
+  ],
+  "opinions": [
+    {
+      "id": "1",
+      "name": "Claude Marrot",
+      "role": "Customer",
+      "opinion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum minima laudantium sint distinctio sequi, nisi perferendis quo! Debitis maiores mollitia molestias ad, quam cum.",
+      "imageUrl": "https://organicthemes.com/demo/profile/files/2018/05/profile-pic.jpg"
+    },
+    {
+      "id": "2",
+      "name": "John Smith",
+      "role": "Customer",
+      "opinion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum minima laudantium sint distinctio sequi, nisi perferendis quo! Debitis maiores mollitia molestias ad, quam cum.",
+      "imageUrl": "https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4.png"
+    },
+    {
+      "id": "3",
+      "name": "Paul Marriot",
+      "role": "Customer",
+      "opinion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum minima laudantium sint distinctio sequi, nisi perferendis quo! Debitis maiores mollitia molestias ad, quam cum.",
+      "imageUrl": "http://i.imgur.com/74sByqd.jpg"
+    }
+  ],
+  "comments": [
+    {
+      "id": "a62e71b5-20ec-d9a6-a02e-35ff05538469",
+      "username": "Marek",
+      "postId": 1,
+      "content": "daniel\n",
+      "createdDate": "2021-02-19T09:49:48.644Z"
+    },
+    {
+      "id": "50528828-3721-0bf2-beeb-b36f2bde267a",
+      "username": "Daniel",
+      "postId": 1,
+      "content": "daniel",
+      "createdDate": "2021-02-23T20:06:54.767Z"
+    },
+    {
+      "id": "50528828-3721-0bf2-beeb-b36f2bde267a",
+      "username": "Daniel",
+      "postId": 2,
+      "content": "daniel",
+      "createdDate": "2021-02-23T20:06:54.767Z"
+    },
+    {
+      "id": "c2f7e9a2-4e01-bedd-7c96-1181bf391cb0",
+      "username": "Daniel",
+      "postId": 1,
+      "content": "dasdsadsa",
+      "createdDate": "2021-03-08T20:54:05.758Z"
+    },
+    {
+      "id": "63f741b4-65d8-aaf9-f89f-f5d804226468",
+      "username": "Daniel",
+      "postId": 1,
+      "content": "dasdsadsadsa",
+      "createdDate": "2021-03-25T16:07:44.579Z"
+    }
+  ],
+  "meals": [
+    {
+      "id": "1",
+      "name": "Rib-Eye Steak",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos.",
+      "price": "20.50",
+      "category": "Dinner",
+      "imageUrl": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/DBAE5DBD-FF1C-4C65-8625-1C4F1EAB89F8/Derivates/8fed9411-be79-496a-866d-c929f7e782fd.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Bourbon Street Chicken and Shrimp",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos.",
+      "price": "24",
+      "category": "Dinner",
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/applebees-bourbon-chicken-and-shrimp-1576690142.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+      "id": "3",
+      "name": "Momma's Pancake",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos.",
+      "price": "17",
+      "category": "Breakfast",
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cracker-barrel-pancakes-1576695108.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+      "id": "4",
+      "name": "Chicken Bryan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos.",
+      "price": "13",
+      "category": "Supper",
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/carrabba-s-chicken-bryan-1576691903.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+      "id": "5",
+      "name": "Sizzling Fajitas",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos.",
+      "price": "30",
+      "category": "Supper",
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/on-the-border-fajitas-1576699982.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+      "id": "6",
+      "name": "Pumpkin Spice Pancakes",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos.",
+      "price": "15",
+      "category": "Breakfast",
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ihop-pumpkin-pancakes-1576697202.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+      "id": "7",
+      "name": "Original BBQ Chicken Pizza",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tempore aperiam veniam quis ipsa necessitatibus praesentium vero impedit corrupti vel modi quisquam error itaque mollitia, repellendus ut, incidunt tenetur possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum maxime pariatur, vero tenetur a, praesentium laboriosam quos.",
+      "price": "24",
+      "category": "Dinner",
+      "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cpk-original-bbq-chicken-pizza-1576691152.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    }
+  ],
+  "chefs": [
+    {
+      "id": "1",
+      "name": "James Smith",
+      "role": "Chef Cook",
+      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus pariatur officiis, harum doloremque eaque totam provident in repellat unde, ut autem tempora nostrum aliquam consectetur dolore rem labore.",
+      "imgUrl": "https://epoka.restaurant/wp-content/uploads/2019/09/marcin-1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Danny Miracle",
+      "role": "Junior Cook",
+      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus pariatur officiis, harum doloremque eaque totam provident in repellat unde, ut autem tempora nostrum aliquam consectetur dolore rem labore.",
+      "imgUrl": "https://abedystrybucja.eu/wp-content/uploads/2018/01/mi%C5%82oszkowalski.png"
+    },
+    {
+      "id": "3",
+      "name": "Gianni Sentino",
+      "role": "Intern Cook",
+      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus pariatur officiis, harum doloremque eaque totam provident in repellat unde, ut autem tempora nostrum aliquam consectetur dolore rem labore.",
+      "imgUrl": "https://oohevent.pl/wp-content/uploads/2020/09/Palac-1513-Edit-e1601020195480.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Martin Koch",
+      "role": "Senior Cook",
+      "bio": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus pariatur officiis, harum doloremque eaque totam provident in repellat unde, ut autem tempora nostrum aliquam consectetur dolore rem labore.",
+      "imgUrl": "https://www.thinkmice.pl/images/Ludzie/Sebastiana-Olma.jpg"
+    }
+  ],
+  "why-choose-us": [
+    {
+      "id": "1",
+      "title": "Guarantee Of Quality",
+      "description": "Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger. This panel is hidden by default but revealed when the user activates the relevant trigger. User activates the relevant trigger."
+    },
+    {
+      "id": "2",
+      "title": " Trusted Resources For Every Need",
+      "description": "Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger. This panel is hidden by default but revealed when the user activates the relevant trigger. User activates the relevant trigger."
+    },
+    {
+      "id": "3",
+      "title": "Professional Crew",
+      "description": "Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger. This panel is hidden by default but revealed when the user activates the relevant trigger. User activates the relevant trigger."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Marcinek",
+      "email": "admin1@gmail.com",
+      "password": "admin1"
+    }
+  ],
+  "reservations": []
+}

@@ -1,0 +1,63 @@
+.side-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    max-width: 70%;
+    height: 100%;
+    z-index: 3000;
+    background-color: #F8F9FA;
+    padding: 3rem 0;
+    box-sizing: border-box;
+    transition: transform .3s;
+}
+
+.drawer-toggle {
+    width: 30px;
+    height: 40px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.3rem 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.drawer-toggle div {
+    width: 90%;
+    height: 4px;
+    border-radius: 20%;
+    background-color: black;
+}
+
+nav>:nth-child(1){
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.nav-link, .logout{
+    color: rgba(0, 0, 0, 0.541);
+}
+
+.active{
+    color: black;
+}
+
+.close{
+    transform: translateX(-100%);
+}
+
+.logout{
+    width: 100%;
+    text-align: center;
+}
+
+@media(min-width: 992px){
+    .side-drawer{
+        display: none;
+    }
+    .drawer-toggle{
+        display: none;
+    }
+}

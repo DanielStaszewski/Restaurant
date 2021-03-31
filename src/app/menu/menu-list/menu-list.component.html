@@ -1,0 +1,38 @@
+<ng-template appPlaceholder></ng-template>
+<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+
+<div class="container">
+  <div class="d-flex flex-column py-5 mt-3">
+    <h1 class="text-center px-3">Explore our menu!</h1>
+    <p class="text-center px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident laborum corrupti a quas
+      dicta</p>
+  </div>
+  <ul class="nav nav-tabs d-flex justify-content-center">
+    <li class="nav-item" role="presentation" *ngFor="let category of categories; let i = index">
+      <a class="nav-link" role="tab" [class.active]="category === activeCategory" (click)="onCategoryClick(i)">
+        {{ category }}
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-wrapper d-flex justify-content-center">
+    <div class="tab-content my-5 px-3">
+      <div class="row">
+        <ng-container *ngFor="let meal of meals">
+          <div class="col-12 col-md-6 meal d-flex flex-wrap py-3" *ngIf="meal.category === activeCategory">
+            <div class="col-9">
+              <h5>
+                <a (click)="onMealDetail(+meal.id)" class="stretched-link text-secondary">{{meal.name}}</a>
+              </h5>
+              <p>{{meal.description | appShorten:50 }}</p>
+            </div>
+            <div class="col-3">
+              <p class="lead text-primary text-right">{{meal.price}}$</p>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+</div>

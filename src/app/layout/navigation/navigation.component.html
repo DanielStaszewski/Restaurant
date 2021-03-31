@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand navbar-light sticky-top bg-light">
+  <div class="container py-2 px-4">
+    <a class="navbar-brand px-2 border border-secondary logo" href="#">
+      <img src="../../../../assets/images/logo.svg" alt="logo" width="30" height="24" class="d-inline-block mb-md-1">
+      Restaurant
+    </a>
+    <div class="justify-content-end">
+      <app-navbar [isLogged]="isLogged" [username]="username" [openedDropdown]="openedDropdown" (logout)="logout()"
+        (reloadPage)="reloadCurrentRoute($event)" ></app-navbar>
+      <app-sidedrawer [isLogged]="isLogged" [username]="username" (logout)="logout()"></app-sidedrawer>
+    </div>
+  </div>
+</nav>

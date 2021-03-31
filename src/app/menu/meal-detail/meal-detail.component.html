@@ -1,0 +1,24 @@
+
+<div class="backdrop" (click)="onClose()"></div>
+<div class="holder">
+    <div class="alert-box">
+        <div class="meal-img">
+            <img [src]="meal.imageUrl" [alt]="meal.name">
+        </div>
+        <span class="close" (click)="onClose()">&times;</span>  
+        <div class="meal-data d-flex flex-column justify-content-center">
+            <h3 class="text-center pt-3 pb-2 px-3">{{ meal.name }}</h3>
+            <div class="d-flex px-2 pb-3">
+                <div class="detail-wrap pl-2">
+                    <span class="text-secondary px-3">Category:</span> 
+                    <h5 class="text-primary px-3 mt-1">{{ meal.category }}</h5>
+                </div>
+                <div class="detail-wrap pr-2">
+                    <span class="text-secondary px-3">Price:</span>
+                    <h5 class="text-primary px-3 mt-1">{{ meal.price }}$</h5>
+                </div>
+            </div>
+            <p class="px-3 pb-4">{{meal.description}}</p>
+        </div >
+    </div>    
+</div>

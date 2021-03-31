@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+
+      <header class="d-flex flex-column py-5 mt-3">
+        <h1 class="text-center">Explore our blog!</h1>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident laborum corrupti a
+          quas
+          dicta</p>
+      </header>
+
+      <section class="post-search">
+        <form class="form-group my-2 my-lg-0" [formGroup]="searchForm">
+          <input class="form-control mr-sm-2" type="search" placeholder="Enter title or tag to search"
+            formControlName="search">
+        </form>
+      </section>
+
+      <hr>
+
+      <section class="post-list">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" [ngClass]="{'center' : this.posts.length === 0}">
+          <ng-template [ngIf]="this.posts.length > 0">
+            <article class="col" *ngFor="let post of posts | appFilter: searchText">
+              <div class="card">
+                <img [src]="post.imgUrl" class="card-img-top" alt="post-image">
+                <div class="ml-2 card-body">
+                  <h5 class="card-title m-0">{{ post.title }}</h5>
+                  <small class="text-muted">{{ post.createdDate }}</small>
+                  <p class="card-text mt-3">{{ post.content | appShorten:120 }}</p>
+                  <button class="btn btn-outline-primary px-3 my-2" (click)="onReadMore(post.id)">Read More</button>
+                </div>
+              </div>
+            </article>
+          </ng-template>
+          <h3 class="search-text" *ngIf="this.posts.length === 0">{{messageIfNoPosts}}</h3>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 d-flex justify-content-center">
+            <ngb-pagination [(page)]="currentPage" [collectionSize]="totalAmountPosts" [pageSize]="postsLimit"
+              (pageChange)="onChangedPage($event)" *ngIf="this.posts.length > 0">
+            </ngb-pagination>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>

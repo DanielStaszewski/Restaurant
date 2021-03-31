@@ -1,0 +1,39 @@
+<div class="drawer-toggle" (click)="toggleSidedrawer()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="side-drawer" [class.close]="!isSidedrawerOpened">
+    <ul>
+        <li class="nav-item px-3" routerLinkActive="active">
+            <div>
+                <a class="nav-link" *ngIf="!isLogged" routerLink="/auth" (click)="isSidedrawerOpened=!isSidedrawerOpened">Authenticate</a>
+                <div class="d-flex flex-wrap justify-content-center" *ngIf="isLogged">
+                    <span class="material-icons md-48">
+                        account_circle
+                    </span>
+                    <h5 class="username text-primary w-100 text-center mt-2">{{username}}</h5>
+                    <a class="logout px-4" *ngIf="isLogged" (click)="onLogout()"><small>Logout</small></a>
+                </div>
+
+            </div>
+        </li>
+        <hr>
+        <li class="nav-item px-3" >
+            <a class="nav-link" routerLink="/" (click)="onReloadCurrentRoute('/')" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" routerLink="/about" (click)="onReloadCurrentRoute('/about')" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" name="menu" routerLink="/menu" (click)="onReloadCurrentRoute('/menu')" routerLinkActive="active">Menu</a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" name="blog" routerLink="/blog" (click)="onReloadCurrentRoute('/blog')" routerLinkActive="active">Blog</a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" routerLink="/reservation" (click)="onReloadCurrentRoute('/reservation')" routerLinkActive="active">Reservation</a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,37 @@
+<ul class="navbar-nav navbar-right me-auto mb-2 mb-lg-0">
+    <li class="nav-item px-lg-3" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" routerLink="/">Home</a>
+    </li>
+    <li class="nav-item px-lg-3" routerLinkActive="active">
+      <a class="nav-link" routerLink="/about" (click)="onReloadCurrentRoute('/about')">About</a>
+    </li>
+    <li class="nav-item px-lg-3" routerLinkActive="active">
+      <a class="nav-link" name="menu" routerLink="/menu" (click)="onReloadCurrentRoute('/menu')">Menu</a>
+    </li>
+    <li class="nav-item px-lg-3" routerLinkActive="active">
+      <a class="nav-link" name="blog"  routerLink="/blog" (click)="onReloadCurrentRoute('/blog')">Blog</a>
+    </li>
+    <li class="nav-item px-lg-3" routerLinkActive="active">
+      <a class="nav-link" routerLink="/reservation" (click)="onReloadCurrentRoute('/reservation')">Reservation</a>
+    </li>
+    <li class="nav-item py-0 mt-1 pl-5 dropdown" routerLinkActive="active">
+      <a class="nav-link py-0" role="button" id="dropdownMenuLink" (click)="toggleDropdown()">
+        <span class="material-icons md-30">
+          person
+        </span>
+        <span #arrow class="material-icons"  [class.rotate]="openedDropdown">
+          keyboard_arrow_down
+        </span>
+      </a>
+      <div class="dropdown-menu"  [class.show]="openedDropdown">
+        <a class="dropdown-item py-2 px-4" *ngIf="!isLogged" routerLink="/auth" (click)="toggleDropdown()">Authenticate</a>
+        <div class="user" *ngIf="isLogged">
+          <span class="material-icons md-48">
+            account_circle
+          </span>
+          <h5 class="username text-primary">{{username}}</h5>
+        </div>
+        <a class="dropdown-item py-2 px-4" *ngIf="isLogged" (click)="onLogout()">Logout</a>
+      </div>
+    </li>
+  </ul>

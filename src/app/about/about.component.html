@@ -1,0 +1,93 @@
+<app-loading-spinner *ngIf="loading"></app-loading-spinner>
+
+<div class="container">
+    <section class="restaurant-history">
+        <div class="row">
+            <div class="col-12 col-lg-7 pt-lg-5 px--2">
+                <div class="dynamic-imgs-wrapper">
+                    <img src="../../assets/images/restauranthistory1.jpg"
+                        alt="restaurant-history image">
+                    <img src="../../assets/images/restauranthistory2.jpg"
+                        alt="restaurant-history image">
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 pl-lg-5">
+                <h1 class="px-2 pb-3 text-center text-sm-left">Restaurant History</h1>
+                <p class="text-center text-sm-left p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ab eligendi,
+                    nostrum ut non nulla consequatur sapiente sequi blanditiis ullam veritatis sed aspernatur eius
+                    possimus
+                    rem qui laborum dignissimos? Consequuntur dolore repudiandae deserunt fuga consequatur et neque amet
+                    nihil eos porro quia minima architecto officiis, pariatur harum.
+                </p>
+                <p class="text-center text-sm-left  p-2">
+                    mollitia voluptates consectetur recusandae molestiae provident quibusdam vel suscipit minus ullam
+                    impedit obcaecati est inventore unde nobis. Totam quos animi, a error tempora incidunt ut nostrum
+                    vel
+                    veniam cupiditate enim aspernatur officiis, sapiente possimus aut earum? Sed aut libero neque
+                    molestiae.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="row">
+            <div class="col-12">
+                <header class="d-flex flex-column align-items-center py-3 mb-3">
+                    <h1 class="text-center px-3">Why choose us?</h1>
+                    <p class="text-center px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias distinctio
+                        voluptatum
+                        magni voluptatibus.</p>
+                </header>
+            </div>
+        </div>
+        <div class="row align-items-start">
+            <div class="col-12 col-lg-6">
+                <div class="why-choose-us--img"></div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="mt-3 mt-lg-5 px-1 px-lg-4">
+                    <div class="accordion-item" *ngFor="let whyChooseUsItem of whyChooseUsItems">
+                        <a class="btn-block d-flex justify-content-between px-2 py-3 border-bottom m-0" role="button" (click)="toggleAccordionItem(+whyChooseUsItem.id)">
+                            {{whyChooseUsItem.title}}
+                            <span class="material-icons mr-2"> {{activeAccordionItem === +whyChooseUsItem.id ? 'remove' : 'add'}} </span>
+                        </a>
+                        <div class="collapse" [class.show]="activeAccordionItem === +whyChooseUsItem.id">
+                            <div class="card card-body border-0 p-2">
+                                <p class="m-0 text-center text-sm-left">
+                                    {{whyChooseUsItem.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="chefs">
+        <div class="row">
+            <div class="col-12">
+                <header class="d-flex flex-column align-items-center py-3 mb-3">
+                    <h1 class="text-center px-3">Our Chefs</h1>
+                    <p class="text-center px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias distinctio
+                        voluptatum
+                        magni voluptatibus. Lorem ipsum dolor sit amet.</p>
+                </header>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 px-xl-4" *ngFor="let chef of chefs">
+                <div class="chef p-3">
+                    <img class="img-fluid img-chef mb-3" [src]="chef.imgUrl"
+                        alt="{{chef.name}} image">
+                    <h4 class="text-center text-sm-left p-1">{{chef.name}}</h4>
+                    <p class="text-mute text-center text-sm-left p-1">{{chef.role}}</p>
+                    <p class="text-center text-sm-left p-1">{{chef.bio}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

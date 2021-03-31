@@ -1,0 +1,202 @@
+<app-loading-spinner *ngIf="loading"></app-loading-spinner>
+
+<section class="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <header class="d-flex flex-column align-items-center py-3 mb-lg-3">
+          <h1 class="text-center px-3">Other Services</h1>
+          <p class="text-center px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias
+            distinctio
+            voluptatum.</p>
+        </header>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center flex-column">
+        <div class="icon-wrapper mb-2 mx-4">
+          <span class="material-icons md-42">
+            local_dining
+          </span>
+        </div>
+        <p class="p-4 text-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, modi explicabo, amet omnis officiis est
+          labore voluptate eaque maiores quae.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3  d-flex align-items-center flex-column">
+        <div class="icon-wrapper mb-2 mx-4">
+          <span class="material-icons md-42">
+            local_bar
+          </span>
+        </div>
+        <p class="p-4 text-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, modi explicabo, amet omnis officiis est
+          labore voluptate eaque maiores quae.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3  d-flex align-items-center flex-column">
+        <div class="icon-wrapper mb-2 mx-4">
+          <span class="material-icons md-42">
+            shopping_cart
+          </span>
+        </div>
+        <p class="p-4 text-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, modi explicabo, amet omnis officiis est
+          labore voluptate eaque maiores quae.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3  d-flex align-items-center flex-column">
+        <div class="icon-wrapper mb-2 mx-4">
+          <span class="material-icons md-42">
+            loyalty
+          </span>
+        </div>
+        <p class="p-4 text-center">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, modi explicabo, amet omnis officiis est
+          labore voluptate eaque maiores quae.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="meals">
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-12">
+        <header class="d-flex flex-column align-items-center py-3 mb-lg-3">
+          <h1 class="text-center px-3">Our Specials</h1>
+          <p class="text-center px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias
+            distinctio
+            voluptatum. <a class="text-primary" routerLink="/menu">To see more, visit our Menu.</a></p>
+        </header>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-6 col-lg-4 col-xl-2" *ngFor="let meal of meals; let i = index">
+        <div class="card card-dish border-0">
+          <img class="card-img-top" *ngIf="i % 2 === 0"
+            [src]="meal.imageUrl"
+            alt="{{meal.name}} image">
+          <div class="card-body px-xxl-5 py-4">
+            <h3 class="card-title text-white">{{meal.name}}</h3>
+            <p class="card-text">
+              <small>
+                {{meal.description | appShorten : 80}}
+              </small>
+            </p>
+            <p class="text-primary lead">${{meal.price}}</p>
+          </div>
+          <img class="card-img-bottom" *ngIf="i % 2 === 1"
+            [src]="meal.imageUrl"
+            alt="{{meal.name}} image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="customers">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12">
+        <header class="d-flex flex-column align-items-center py-3 mb-lg-3">
+          <h1 class="text-center px-3">Customers Say</h1>
+          <p class="text-center px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias
+            distinctio
+            voluptatum.</p>
+        </header>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <ngb-carousel #carousel [interval]="intervalCarousel" [wrap]="true" (slide)="onSlid($event)"
+          [showNavigationIndicators]="false" [showNavigationArrows]="false">
+          <ng-template ngbSlide *ngFor="let cusOpinion of customerOpinions; let i = index" [id]="i">
+            <div class="media-wrap d-flex justify-content-center">
+              <div class="media media--customer">
+                <div class="media-body">
+                  <div class="img-customer m-auto">
+                    <img [src]="cusOpinion.imageUrl" alt="{{cusOpinion.name}} opinion">
+                  </div>
+                  <p class="text-center media-com font-italic py-2 mt-3 mb-2">"{{cusOpinion.opinion}}"</p>
+                  <div class="line"></div>
+                  <div class="author">
+                    <span class="span--customer d-block text-center"><small>{{cusOpinion.name}}</small></span>
+                    <span class="span--customer d-block text-center"><small>{{cusOpinion.role}}</small></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="dots d-flex justify-content-center mt-2">
+          <div class="dot" [class.dotActive]="activeSlideOnCarousel === i" (click)="getOpinion(i)"
+            *ngFor="let CusOpinion of customerOpinions, let i = index"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <header class="d-flex flex-column align-items-center py-3 mb-lg-3">
+          <h1 class="text-center px-3">Recent posts</h1>
+          <p class="text-center px-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias
+            distinctio
+            voluptatum. <a class="text-primary" routerLink="/blog">To see more, visit our Blog.</a></p>
+        </header>
+      </div>
+    </div>
+    <div class="row px-lg-5">
+      <div class="col-12 col-lg-6">
+        <div *ngFor="let post of recentPosts | slice:1:recentPosts.length+1"
+          class="media media--pos d-flex flex-column align-items-center flex-sm-row align-items-md-start px-3 pt-3 mr-md-4 mb-4">
+          <div>
+            <img [src]="post.imgUrl" alt="{{post.title}} image" class="img-fluid">
+          </div>
+          <div class="media-body ml-sm-4 mt-3 mt-sm-0">
+            <h5>{{post.title}}</h5>
+            <small>{{post.createdDate}}</small>
+            <p class="pt-1">{{post.content | appShorten : 100}}</p>
+            <p class="text-left">
+              <button class="btn btn-outline-primary btn-sm" (click)="onShowPostDetails(+post.id)">Read More</button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div
+          class="media media--big px-3 pt-3 mr-md-4 mb-4 d-flex flex-column flex-sm-row flex-lg-column align-items-center align-items-md-start">
+          <div class="py-lg-3 mb-lg-3">
+            <img [src]="recentPosts[0].imgUrl" alt="{{recentPosts[0].title}} image" class="img-fluid">
+          </div>
+          <div class="media-body ml-sm-4 mt-3 mt-sm-0 ml-lg-0">
+            <h5>{{recentPosts[0].title}}</h5>
+            <small>{{recentPosts[0].createdDate}}</small>
+            <p class="pt-1">{{recentPosts[0].content | appShorten : 100}}</p>
+            <p class="text-left">
+              <button class="btn btn-outline-primary btn-sm" (click)="onShowPostDetails(+recentPosts[0].id)">Read
+                More</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
